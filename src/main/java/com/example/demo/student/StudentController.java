@@ -13,11 +13,10 @@ public class StudentController {
     private final StudentService studentService;
 
     public StudentController(StudentService studentService) {
-
         this.studentService = studentService;
     }
 
-    // Make REST Endpoint
+
     @GetMapping // GET something out from our server
     public List<Student> getStudents() {
         return studentService.getStudents();
